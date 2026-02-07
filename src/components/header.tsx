@@ -49,7 +49,7 @@ export function Header() {
                     className="flex items-center gap-2 group"
                 >
                     <span className="text-xl font-bold tracking-wider text-white transition-all duration-300 group-hover:text-gray-300">
-                        GRYPHONIX
+                        ZENITH&apos;26
                     </span>
                 </Link>
 

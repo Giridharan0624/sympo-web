@@ -1,47 +1,39 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { AnimateOnScroll } from "@/components/animate-on-scroll";
 import {
-  ArrowRight, Code, Gamepad2, Users, Trophy, Calendar, MapPin,
+  ArrowRight, Code, Gamepad2, Users, Calendar, MapPin,
   Mail, Phone, Clock, Send, CheckCircle, ExternalLink, User, GraduationCap
 } from "lucide-react";
 
-// Data
+// Data - 4 technical events
 const technicalEvents = [
   { name: "Code Sprint", description: "Fast-paced competitive programming challenge with algorithmic problems.", category: "Programming" },
   { name: "Hackathon", description: "24-hour hackathon building innovative solutions to real-world problems.", category: "Development" },
   { name: "Paper Presentation", description: "Present research papers on emerging technologies.", category: "Research" },
   { name: "Technical Quiz", description: "Test knowledge in programming, tech history, and CS concepts.", category: "Quiz" },
-  { name: "Web Development", description: "Design and develop stunning websites within a time frame.", category: "Development" },
-  { name: "Debugging Challenge", description: "Find and fix bugs in code snippets racing against time.", category: "Programming" },
-  { name: "UI/UX Design", description: "Create intuitive and beautiful user interfaces.", category: "Design" },
-  { name: "Project Expo", description: "Showcase innovative projects and prototypes to judges.", category: "Innovation" },
 ];
 
+// Data - 4 non-technical events
 const nonTechnicalEvents = [
   { name: "Gaming Tournament", description: "Battle in popular multiplayer games for exciting prizes.", category: "Gaming" },
   { name: "Photography Contest", description: "Capture the symposium through your lens.", category: "Creative" },
   { name: "Treasure Hunt", description: "Navigate clues and puzzles to find hidden treasure.", category: "Adventure" },
-  { name: "Just a Minute (JAM)", description: "Speak on random topics for 60 seconds.", category: "Speaking" },
-  { name: "Meme Making", description: "Create the funniest memes on given topics.", category: "Creative" },
-  { name: "Dumb Charades", description: "Act out movies and phrases without speaking.", category: "Fun" },
   { name: "Quiz Mania", description: "General knowledge quiz on movies, sports, and pop culture.", category: "Quiz" },
-  { name: "Short Film Contest", description: "Create short films showcasing storytelling abilities.", category: "Creative" },
 ];
 
+// Data - 2 staff coordinators
 const staffCoordinators = [
   { name: "Dr. Sarah Johnson", department: "CSE", role: "Head Coordinator", email: "sarah.johnson@jec.ac.in", phone: "+91 98765 43210" },
   { name: "Prof. Rajesh Kumar", department: "IT", role: "Technical Lead", email: "rajesh.kumar@jec.ac.in", phone: "+91 98765 43211" },
-  { name: "Dr. Priya Sharma", department: "ECE", role: "Event Coordinator", email: "priya.sharma@jec.ac.in", phone: "+91 98765 43212" },
-  { name: "Prof. Michael David", department: "MECH", role: "Logistics Coordinator", email: "michael.david@jec.ac.in", phone: "+91 98765 43213" },
 ];
 
+// Data - 8 student coordinators
 const studentCoordinators = [
   { name: "Arun Kumar", department: "CSE", role: "Overall Coordinator", email: "arun.k@student.jec.ac.in", phone: "+91 98765 12345" },
   { name: "Priya Venkatesh", department: "IT", role: "Technical Head", email: "priya.v@student.jec.ac.in", phone: "+91 98765 12346" },
@@ -49,6 +41,8 @@ const studentCoordinators = [
   { name: "Sneha Reddy", department: "ECE", role: "Registration Head", email: "sneha.r@student.jec.ac.in", phone: "+91 98765 12348" },
   { name: "Vikram Singh", department: "MECH", role: "Logistics Head", email: "vikram.s@student.jec.ac.in", phone: "+91 98765 12349" },
   { name: "Deepika M", department: "CSE", role: "Marketing Head", email: "deepika.m@student.jec.ac.in", phone: "+91 98765 12350" },
+  { name: "Karthik R", department: "IT", role: "Hospitality Head", email: "karthik.r@student.jec.ac.in", phone: "+91 98765 12351" },
+  { name: "Anjali Krishnan", department: "EEE", role: "Sponsorship Head", email: "anjali.k@student.jec.ac.in", phone: "+91 98765 12352" },
 ];
 
 // Event Card Component
@@ -152,13 +146,13 @@ export default function HomePage() {
           <AnimateOnScroll animation="fade-down" delay={0}>
             <Badge className="mb-6 bg-white/10 text-gray-300 backdrop-blur-sm border-white/20 px-4 py-2 animate-pulse">
               <Calendar className="mr-2 h-4 w-4" />
-              Coming Soon 2026
+              2026
             </Badge>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="zoom-in" delay={200}>
             <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter text-white mb-4 bg-gradient-to-r from-white via-gray-300 to-white bg-clip-text">
-              GRYPHONIX
+              ZENITH&apos;26
             </h1>
           </AnimateOnScroll>
 
@@ -211,39 +205,19 @@ export default function HomePage() {
             <div className="text-center mb-12">
               <Badge className="mb-4 bg-white/10 text-gray-300">About</Badge>
               <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-                Welcome to GRYPHONIX
+                Welcome to ZENITH&apos;26
               </h2>
             </div>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up" delay={200}>
-            <p className="text-lg text-gray-400 leading-relaxed mb-12 max-w-4xl mx-auto text-center">
-              GRYPHONIX is the flagship national-level technical symposium of Jeppiaar Engineering College.
+            <p className="text-lg text-gray-400 leading-relaxed max-w-4xl mx-auto text-center">
+              ZENITH&apos;26 is the flagship national-level technical symposium of Jeppiaar Engineering College.
               It brings together tech enthusiasts, innovators, and creative minds from across the country
               to compete, collaborate, and celebrate technology. With a diverse range of technical and
-              non-technical events, GRYPHONIX offers something for everyone.
+              non-technical events, ZENITH&apos;26 offers something for everyone.
             </p>
           </AnimateOnScroll>
-
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {[
-              { value: "20+", label: "Events", icon: Trophy },
-              { value: "1000+", label: "Participants", icon: Users },
-              { value: "50+", label: "Colleges", icon: GraduationCap },
-              { value: "₹1L+", label: "Prize Pool", icon: Trophy },
-            ].map((stat, index) => (
-              <AnimateOnScroll key={index} animation="zoom-in" delay={index * 100}>
-                <div className="text-center p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 transition-all duration-500 hover:-translate-y-1">
-                  <stat.icon className="h-8 w-8 mx-auto mb-3 text-gray-400" />
-                  <div className="text-3xl sm:text-4xl font-bold text-white mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-gray-500 text-sm">{stat.label}</div>
-                </div>
-              </AnimateOnScroll>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -265,9 +239,9 @@ export default function HomePage() {
             </div>
           </AnimateOnScroll>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {technicalEvents.map((event, index) => (
-              <EventCard key={index} {...event} delay={index * 80} />
+              <EventCard key={index} {...event} delay={index * 100} />
             ))}
           </div>
         </div>
@@ -291,9 +265,9 @@ export default function HomePage() {
             </div>
           </AnimateOnScroll>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {nonTechnicalEvents.map((event, index) => (
-              <EventCard key={index} {...event} delay={index * 80} />
+              <EventCard key={index} {...event} delay={index * 100} />
             ))}
           </div>
         </div>
@@ -312,12 +286,12 @@ export default function HomePage() {
               <Badge className="mb-4 bg-emerald-500/10 text-emerald-400 border-emerald-500/30">Faculty</Badge>
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Staff Coordinators</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Meet our dedicated faculty members behind GRYPHONIX.
+                Meet our dedicated faculty members behind ZENITH&apos;26.
               </p>
             </div>
           </AnimateOnScroll>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
             {staffCoordinators.map((coordinator, index) => (
               <CoordinatorCard key={index} {...coordinator} delay={index * 100} />
             ))}
@@ -338,12 +312,12 @@ export default function HomePage() {
               <Badge className="mb-4 bg-orange-500/10 text-orange-400 border-orange-500/30">Students</Badge>
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Student Coordinators</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                The driving force behind GRYPHONIX.
+                The driving force behind ZENITH&apos;26.
               </p>
             </div>
           </AnimateOnScroll>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {studentCoordinators.map((coordinator, index) => (
               <CoordinatorCard key={index} {...coordinator} delay={index * 80} />
             ))}
@@ -364,7 +338,7 @@ export default function HomePage() {
               <Badge className="mb-4 bg-cyan-500/10 text-cyan-400 border-cyan-500/30">Get in Touch</Badge>
               <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">Contact Us</h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Have questions about GRYPHONIX? We&apos;re here to help!
+                Have questions about ZENITH&apos;26? We&apos;re here to help!
               </p>
             </div>
           </AnimateOnScroll>
@@ -379,7 +353,7 @@ export default function HomePage() {
                 <CardContent className="space-y-6">
                   {[
                     { icon: MapPin, title: "Address", content: "Jeppiaar Engineering College\nOMR, Chennai - 600119\nTamil Nadu, India" },
-                    { icon: Mail, title: "Email", content: "gryphonix@jeppiaar.ac.in", link: "mailto:gryphonix@jeppiaar.ac.in" },
+                    { icon: Mail, title: "Email", content: "zenith@jeppiaar.ac.in", link: "mailto:zenith@jeppiaar.ac.in" },
                     { icon: Phone, title: "Phone", content: "+91 98765 43210", link: "tel:+919876543210" },
                     { icon: Clock, title: "Working Hours", content: "Mon - Fri: 9AM - 5PM\nSat: 9AM - 1PM" },
                   ].map((item, index) => (

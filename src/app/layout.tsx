@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "GRYPHONIX | Jeppiaar Engineering College",
-  description: "GRYPHONIX - National Level Technical Symposium at Jeppiaar Engineering College. Register for technical and non-technical events.",
-  keywords: ["GRYPHONIX", "symposium", "technical events", "Jeppiaar Engineering College", "JEC"],
+  title: "ZENITH'26 | Jeppiaar Engineering College",
+  description: "ZENITH'26 - National Level Technical Symposium at Jeppiaar Engineering College. Register for technical and non-technical events.",
+  keywords: ["ZENITH'26", "symposium", "technical events", "Jeppiaar Engineering College", "JEC"],
 };
 
 export default function RootLayout({

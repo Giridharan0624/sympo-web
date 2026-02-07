@@ -3,11 +3,11 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 
 const quickLinks = [
-    { href: "/technical-events", label: "Technical Events" },
-    { href: "/non-technical-events", label: "Non-Technical Events" },
-    { href: "/staff-coordinators", label: "Staff Coordinators" },
-    { href: "/student-coordinators", label: "Student Coordinators" },
-    { href: "/contact", label: "Contact" },
+    { href: "#technical-events", label: "Technical Events" },
+    { href: "#non-technical-events", label: "Non-Technical Events" },
+    { href: "#staff-coordinators", label: "Staff Coordinators" },
+    { href: "#student-coordinators", label: "Student Coordinators" },
+    { href: "#contact", label: "Contact" },
 ];
 
 export function Footer() {
@@ -18,7 +18,7 @@ export function Footer() {
                     {/* Brand */}
                     <div className="space-y-4">
                         <h3 className="text-2xl font-bold tracking-wider text-white">
-                            GRYPHONIX
+                            ZENITH&apos;26
                         </h3>
                         <p className="text-sm text-gray-400">
                             A National Level Technical Symposium organized by Jeppiaar Engineering College.
@@ -40,13 +40,13 @@ export function Footer() {
                         <h4 className="text-lg font-semibold text-white">Quick Links</h4>
                         <nav className="flex flex-col gap-2">
                             {quickLinks.map((link) => (
-                                <Link
+                                <a
                                     key={link.href}
                                     href={link.href}
                                     className="text-sm text-gray-400 transition-colors hover:text-white"
                                 >
                                     {link.label}
-                                </Link>
+                                </a>
                             ))}
                         </nav>
                     </div>
@@ -56,11 +56,11 @@ export function Footer() {
                         <h4 className="text-lg font-semibold text-white">Contact Us</h4>
                         <div className="flex flex-col gap-3">
                             <a
-                                href="mailto:gryphonix@jeppiaar.ac.in"
+                                href="mailto:zenith@jeppiaar.ac.in"
                                 className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-white"
                             >
                                 <Mail className="h-4 w-4" />
-                                gryphonix@jeppiaar.ac.in
+                                zenith@jeppiaar.ac.in
                             </a>
                             <a
                                 href="tel:+919876543210"
@@ -81,7 +81,7 @@ export function Footer() {
 
                 <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row">
                     <p className="text-sm text-gray-500">
-                        © 2026 GRYPHONIX. All rights reserved.
+                        © 2026 ZENITH&apos;26. All rights reserved.
                     </p>
                     <p className="text-sm text-gray-500">
                         Jeppiaar Engineering College
