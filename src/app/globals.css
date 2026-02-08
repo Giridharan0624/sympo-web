@@ -165,6 +165,96 @@
   animation: float 10s ease-in-out infinite;
 }
 
+/* Fire Rising Animation */
+@keyframes fireRise {
+  0% {
+    transform: translateY(100%) scale(0.8);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(-100vh) scale(0.3);
+    opacity: 0;
+  }
+}
+
+.animate-fire-rise {
+  animation: fireRise linear infinite;
+}
+
+/* Ember Glow Animation */
+@keyframes emberGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 5px #D73A2F, 0 0 10px #D73A2F, 0 0 15px #FF6A2A;
+    opacity: 0.6;
+  }
+
+  50% {
+    box-shadow: 0 0 10px #D73A2F, 0 0 20px #FF6A2A, 0 0 30px #D4AF37;
+    opacity: 1;
+  }
+}
+
+.animate-ember {
+  animation: emberGlow 2s ease-in-out infinite;
+}
+
+/* Flame Flicker */
+@keyframes flicker {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+
+  25% {
+    opacity: 0.9;
+    transform: scale(1.02) rotate(-1deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(0.98) rotate(1deg);
+  }
+
+  75% {
+    opacity: 0.85;
+    transform: scale(1.01) rotate(-0.5deg);
+  }
+}
+
+.animate-flicker {
+  animation: flicker 0.5s ease-in-out infinite;
+}
+
+/* Fire Glow Pulse */
+@keyframes fireGlow {
+
+  0%,
+  100% {
+    filter: drop-shadow(0 0 20px rgba(215, 58, 47, 0.5));
+  }
+
+  50% {
+    filter: drop-shadow(0 0 40px rgba(215, 58, 47, 0.8)) drop-shadow(0 0 60px rgba(255, 106, 42, 0.4));
+  }
+}
+
+.animate-fire-glow {
+  animation: fireGlow 3s ease-in-out infinite;
+}
+
 /* Smooth section transitions */
 section {
   scroll-margin-top: 4rem;
