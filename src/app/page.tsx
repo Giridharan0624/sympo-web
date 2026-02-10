@@ -217,11 +217,13 @@ export default function HomePage() {
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="zoom-in" delay={200}>
-            <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter mb-4 animate-fire-glow">
-              <span className="bg-gradient-to-r from-[#8B0000] via-[#D73A2F] via-[#FF6A2A] to-[#D4AF37] bg-clip-text text-transparent">
-                ZENITH&apos;26
-              </span>
-            </h1>
+            <div className="mb-4 animate-fire-glow">
+              <img
+                src="/zenith-logo.png"
+                alt="ZENITH'26"
+                className="mx-auto h-64 sm:h-80 md:h-[400px] lg:h-[500px] w-auto object-contain drop-shadow-[0_0_40px_rgba(215,58,47,0.6)]"
+              />
+            </div>
           </AnimateOnScroll>
 
           <AnimateOnScroll animation="fade-up" delay={400}>
